@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700;800&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -9,41 +9,134 @@
   font-weight: 400;
 }
 
-html{
+html {
   font-size: 62.5%;
 }
 
-/* Section 1 */
-.section-1{
-width: 100%;
-height: 100vh;
-background-color: rgb(101, 114, 107);
-display: flex;
-flex-direction: column;
-align-items: center;
-justify-content: space-evenly;
-}
-
-.section-heading{
+.section-heading {
   font-size: 12rem;
   font-weight: 900;
   color: #fff;
   text-align: center;
-  text-transform:uppercase;
-  letter-spacing: 0.5 rem;
-  text-shadow: .3rem .3rem .3rem #000;
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  text-shadow: 0.3rem 0.3rem 0.3rem #000;
 }
 
-.section-1-icons i{
+/* Section 1 */
+.section-1 {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(101, 114, 107);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.section-1-icons i {
   font-size: 35rem;
-  color:rgb(248, 195, 96);
+  color: rgb(192, 157, 91);
   position: absolute;
   transform: translate(-50%, -50%) scale(0);
-  text-shadow: .2rem .2rem .2rem #000;
-  transition: transform .3s;
+  text-shadow: 0.2rem 0.2rem 0.2rem #000;
+  transition: transform 0.3s;
+  cursor: pointer;
 }
 
-.section-1-icons i.change{
+.section-1-icons i.change {
   transform: translate(-50%, -50%) scale(1);
-  transition: transform .3s .3s;
+  transition: transform 0.3s 0.3s;
 }
+
+/* Section 2 */
+.section-2 {
+  width: 100%;
+  height: 100vh;
+  background-color: rgb(60, 63, 61);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 10rem 0;
+}
+
+.cards-container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card {
+  width: 30rem;
+  /* background-color: rgb(204, 204, 204); */
+  background-color: rgb(192, 157, 91);
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 1rem 1rem 1rem #000;
+  position: relative;
+  transform: rotateY(20deg) skewX(-2deg);
+  transition: transform .5s, box-shadow 0.5s;
+}
+
+.card:hover{
+  transform: rotateY(20deg) skewX(-2deg) translateY(-3rem);
+  box-shadow: 2rem 2rem 2rem #000;
+}
+
+.card::before{
+  content: "";
+  height: 100%;
+  width: 1rem;
+  background-color: rgb(143, 120, 77);
+  position: absolute;
+  top: 0;
+  left:-1rem;
+  transform: skewY(45deg);
+  transform-origin: right;
+  box-shadow: -0.1rem -0.1rem -0.1rem #000;
+}
+
+.card::after{
+  content: "";
+  height: 1rem;
+  width: 100%;
+  background-color: rgb(173, 144, 88);
+  position: absolute;
+  top: -1rem;
+  left:0;
+  transform: skewX(45deg);
+  transform-origin: bottom;
+  box-shadow: -0.1rem -0.1rem -0.1rem #000;
+}
+
+.card-img {
+  width: 100%;
+}
+
+.card-name{
+  font-size: 3rem;
+  font-weight: 900;  
+  text-transform: uppercase;
+  letter-spacing: 0.5rem;
+  color: #111;
+  margin: 2rem 0;
+  text-shadow: 0.15rem 0.15rem 0.15rem #000;
+}
+
+.card-btn{
+  width: 70%;
+  background-color: #111;
+  color: rgb(201, 201, 201);
+  border-radius: 5rem;
+  font-size: 1.5rem;
+  font-weight: 800;
+  letter-spacing: .2rem;
+  text-transform: capitalize;
+  border:none;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  box-shadow: -.2rem -.2em -.2rem #000;
+}
+
