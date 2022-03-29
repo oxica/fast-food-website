@@ -36,7 +36,7 @@ html {
 
 .section-1-icons i {
   font-size: 35rem;
-  color: rgb(214, 161, 100);
+  color: rgb(235, 185, 127);
   position: absolute;
   transform: translate(-50%, -50%) scale(0);
   text-shadow: 0.2rem 0.2rem 0.2rem #000;
@@ -57,7 +57,7 @@ html {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 10rem 0;
+  padding: 7rem 0;
 }
 
 .cards-container {
@@ -77,35 +77,35 @@ html {
   box-shadow: 1rem 1rem 1rem #000;
   position: relative;
   transform: rotateY(20deg) skewX(-2deg);
-  transition: transform .5s, box-shadow 0.5s;
+  transition: transform 0.5s, box-shadow 0.5s;
 }
 
-.card:hover{
+.card:hover {
   transform: rotateY(20deg) skewX(-2deg) translateY(-3rem);
   box-shadow: 2rem 2rem 2rem #000;
 }
 
-.card::before{
+.card::before {
   content: "";
   height: 100%;
   width: 1rem;
   background-color: rgb(172, 132, 86);
   position: absolute;
   top: 0;
-  left:-1rem;
+  left: -1rem;
   transform: skewY(45deg);
   transform-origin: right;
   box-shadow: -0.1rem -0.1rem -0.1rem #000;
 }
 
-.card::after{
+.card::after {
   content: "";
   height: 1rem;
   width: 100%;
   background-color: rgb(197, 153, 103);
   position: absolute;
   top: -1rem;
-  left:0;
+  left: 0;
   transform: skewX(45deg);
   transform-origin: bottom;
   box-shadow: -0.1rem -0.1rem -0.1rem #000;
@@ -115,9 +115,9 @@ html {
   width: 100%;
 }
 
-.card-name{
+.card-name {
   font-size: 3rem;
-  font-weight: 900;  
+  font-weight: 900;
   text-transform: uppercase;
   letter-spacing: 0.5rem;
   color: #111;
@@ -125,39 +125,127 @@ html {
   text-shadow: 0.15rem 0.15rem 0.15rem #000;
 }
 
-.card-btn{
+.card-btn {
   width: 70%;
   background-color: #111;
   color: rgb(201, 201, 201);
   border-radius: 5rem;
   font-size: 1.5rem;
   font-weight: 800;
-  letter-spacing: .2rem;
+  letter-spacing: 0.2rem;
   text-transform: capitalize;
-  border:none;
+  border: none;
   cursor: pointer;
   padding: 0.5rem 0;
-  box-shadow: -.2rem -.2em -.2rem #000;
+  box-shadow: -0.2rem -0.2em -0.2rem #000;
 }
 
 /* Section 3 */
 
-.section-3{
-  background-color: rgb(107, 119, 113);
-  padding: 5rem 0;
+.section-3 {
+  background-color: rgb(50, 55, 63);
+  padding: 4rem 0;
+  height: 100vh;
 }
 
-.gallery{
+.gallery {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-evenly;
+  margin-top: 2rem;
 }
 
-.food-img{
-  width: 20vw;
+.gallery-link {
+  position: relative;
+  margin: 4rem -1px;
+}
+
+.gallery-link::before {
+  content: "";
+  position: absolute;
+  top: 2vw;
+  left: 80%;
+  width: 0.2rem;
+  /* height: 80%; */
+  height: 0;
+  background-color: #fff;
+  transition: height 0.5s;
+}
+
+.gallery-link:hover::before {
+  height: 80%;
+}
+
+.gallery-link::after {
+  content: "";
+  position: absolute;
+  top: 30%;
+  left: 2rem;
+  /* width: 90%; */
+  width: 0;
+  height: 0.2rem;
+  background-color: #fff;
+  transition: width 0.5s;
+}
+
+.gallery-link:hover::after {
+  width: 90%;
+}
+
+.food-img {
+  width: 25vw;
   height: 15vw;
   object-fit: cover;
+  box-shadow: 0.3rem 0.3rem 0.2rem #e92929, 0.5rem 0.5rem 0.2rem #a2e946,
+    0.7rem 0.7rem 0.2rem #297ce9, 0.9rem 0.9rem 0.2rem #e92999;
+  transition: all 0.5s;
 }
 
+.gallery-link:hover .food-img {
+  box-shadow: 1rem 1rem 0.2rem #e92929, 2rem 2rem 0.2rem #a2e946,
+    3rem 3rem 0.2rem #297ce9, 4rem 4rem 0.2rem #e92999;
+    filter:blur(0.5rem);
+    opacity: .5;
+    transform: scale(1.1);
+}
 
+.food-name {
+  position: absolute;
+  top: 3rem;
+  left: 3rem;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  color: #fff;
+  width: 0;
+  overflow: hidden;
+  transition: width 0.3s;
+}
+
+.gallery-link:hover .food-name {
+  width: 100%;
+  transition: width 1.5s 0.5s;
+}
+
+.food-description {
+  position: absolute;
+  bottom: 3vw;
+  left: 2rem;
+  width: 70%;
+  font-size: 1.5rem;
+  font-weight: 300;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  color: #fff;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s;
+}
+
+.gallery-link:hover .food-description {
+  opacity: 1;
+  visibility: visible;
+  transition: opacity 1s 1s;
+}
