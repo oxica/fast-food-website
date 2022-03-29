@@ -18,7 +18,7 @@ html {
   font-weight: 900;
   color: #fff;
   text-align: center;
-  text-transform: uppercase;
+  text-transform: capitalize;
   letter-spacing: 0.5rem;
   text-shadow: 0.3rem 0.3rem 0.3rem #000;
 }
@@ -36,7 +36,7 @@ html {
 
 .section-1-icons i {
   font-size: 35rem;
-  color: rgb(192, 157, 91);
+  color: rgb(214, 161, 100);
   position: absolute;
   transform: translate(-50%, -50%) scale(0);
   text-shadow: 0.2rem 0.2rem 0.2rem #000;
@@ -68,7 +68,7 @@ html {
 .card {
   width: 30rem;
   /* background-color: rgb(204, 204, 204); */
-  background-color: rgb(192, 157, 91);
+  background-color: rgb(214, 161, 100);
   padding: 4rem;
   display: flex;
   flex-direction: column;
@@ -89,7 +89,7 @@ html {
   content: "";
   height: 100%;
   width: 1rem;
-  background-color: rgb(143, 120, 77);
+  background-color: rgb(172, 132, 86);
   position: absolute;
   top: 0;
   left:-1rem;
@@ -102,7 +102,7 @@ html {
   content: "";
   height: 1rem;
   width: 100%;
-  background-color: rgb(173, 144, 88);
+  background-color: rgb(197, 153, 103);
   position: absolute;
   top: -1rem;
   left:0;
@@ -139,4 +139,25 @@ html {
   padding: 0.5rem 0;
   box-shadow: -.2rem -.2em -.2rem #000;
 }
+
+/* Section 3 */
+
+.section-3{
+  background-color: rgb(107, 119, 113);
+  padding: 5rem 0;
+}
+
+.gallery{
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.food-img{
+  width: 20vw;
+  height: 15vw;
+  object-fit: cover;
+}
+
 
